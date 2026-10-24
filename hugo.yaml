@@ -1,0 +1,47 @@
+baseURL: "https://hajackstraw.github.io/"
+locale: zh-CN
+defaultContentLanguage: zh
+hasCJKLanguage: true
+title: "HAJackstraw · 拾知"
+theme: PaperMod
+enableRobotsTXT: true
+pagination:
+  pagerSize: 8
+outputs:
+  home: [HTML, RSS, JSON]
+params:
+  env: production
+  description: "记录探索，连接灵感。关于 AI、开源工具与学习方法的个人博客。"
+  author: HAJackstraw
+  mainSections: [posts]
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+  DateFormat: "2006.01.02"
+  homeInfoParams:
+    Title: "保持好奇，慢慢积累。"
+  assets:
+    favicon: /favicon.svg
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    minMatchCharLength: 1
+    threshold: 0.4
+    keys: [title, permalink, summary, content]
+menu:
+  main:
+    - {name: 文章, url: /posts/, weight: 10}
+    - {name: 归档, url: /archives/, weight: 20}
+    - {name: 标签, url: /tags/, weight: 30}
+    - {name: 关于, url: /about/, weight: 40}
+    - {name: 搜索, url: /search/, weight: 50}
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: false
